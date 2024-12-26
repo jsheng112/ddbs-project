@@ -1,0 +1,17 @@
+
+version: '3'
+
+services:
+
+  mongo_svr:
+    container_name: mongo_svr
+    image: mongo
+    command: mongos --configdb cfg/192.168.3.33:30001,192.168.3.33:30002,192.168.3.33:30003 --bind_ip 0.0.0.0 --port 27017
+    ports:
+      - 30000:27017
+    networks:
+      - mongo_svr
+networks:
+  mongo_svr:
+    driver: bridge
+ 

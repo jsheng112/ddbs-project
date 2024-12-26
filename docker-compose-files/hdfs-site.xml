@@ -1,0 +1,11 @@
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>3</value> <!-- Adjust this based on the number of DataNodes -->
+    </property>
+</configuration>
+
+<property>
+  <name>fs.defaultFS</name>
+  <value>hdfs://namenode:8020</value>
+</property>
